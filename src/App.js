@@ -18,7 +18,7 @@ function App() {
                         <Link to="authors/">Authors</Link>
                     </li>
                     <li>                    
-                        <Link to="publisher/">Publishers</Link>
+                        <Link to="publishers/">Publishers</Link>
                     </li>
                     <li>                    
                         <Link to="categories/">Categories</Link>
