@@ -1,5 +1,6 @@
-import './App.css';
+
 import BooksList from './components/books/list.component';
+import CreateBook from './components/books/create.component';
 import AuthorsList from './components/authors/list.component';
 import PublishersList from './components/publishers/list.component';
 import CategoriesList from './components/categories/list.component';
@@ -11,22 +12,45 @@ function App() {
         <div>
             <nav>
                 <ul>
-                    <li>                    
-                        <Link to="books/">Books</Link>
+                    <li> Books                   
+                        <ol>
+                            <li>
+                                <Link to="books/">List</Link>                                                                 
+                            </li>
+                            <li>
+                                <Link to="books/new">New</Link>
+                            </li>
+                        </ol>
+                        
                     </li>
-                    <li>                    
-                        <Link to="authors/">Authors</Link>
+                    <li> Authors
+                        <ol>
+                            <li>
+                                <Link to="authors/">List</Link>                                    
+                            </li>
+                        </ol>               
+                        
                     </li>
-                    <li>                    
-                        <Link to="publishers/">Publishers</Link>
+                    <li> Publishers
+                        <ol>
+                            <li>
+                                <Link to="publishers/">List</Link>                                    
+                            </li>
+                        </ol>
                     </li>
-                    <li>                    
-                        <Link to="categories/">Categories</Link>
+                    <li>  Categories
+                        <ol>
+                            <li>
+                                <Link to="categories/">List</Link>                                    
+                            </li>
+                        </ol>
                     </li>
                 </ul>
             </nav>
+            <hr /><br /><hr />
             <Routes>
                 <Route path="books/" element={<BooksList />}/>
+                <Route path="books/new" element={<CreateBook />}/>
                 <Route path="authors/" element={<AuthorsList />}/>
                 <Route path="publishers/" element={<PublishersList />}/>
                 <Route path="categories/" element={<CategoriesList />}/>
